@@ -17,6 +17,8 @@ h6 {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 a {
   text-decoration: none;
@@ -151,7 +153,7 @@ address {
 /*--------------h1---------------*/
 /*---------------------------------*/
 
-.section-title {
+.section-t itle {
   background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -162,8 +164,9 @@ address {
   background-position: center center;
   background-size: cover;
   width: 100%;
-  max-width: 1440px;
-  padding: 188px 0;
+  /*   max-width: 1440px; */
+  padding: 72px 0;
+  /*   padding: 188px 0; */
   margin: 0 auto;
 }
 
@@ -173,13 +176,17 @@ address {
 .title {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  /*   font-size: 56px; */
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  /*   line-height: 1.07; */
+  line-height: 1.11;
   letter-spacing: 0.02em;
   width: 100%;
-  max-width: 496px;
-  margin: 0 auto 48px;
+  /*   max-width: 496px; */
+  /*   margin: 0 auto 48px; */
+  margin: 0 auto 72px;
+  text-transform: capitalize;
 }
 
 .button-title-orderservice:hover,
@@ -236,10 +243,7 @@ address {
   align-items: flex-start;
   width: 320px;
   gap: 72px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding: 96px 16px;
   /*   gap: 24px; */
 }
 
@@ -394,8 +398,10 @@ address {
 /*--------ourportfolio--------*/
 
 .ourportfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /*   padding-top: 120px;
+  padding-bottom: 120px; */
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 .ourportfolio-title {
@@ -853,22 +859,47 @@ address {
 
 /**--------------- table-----------------**/
 
-/*----------ourbenefits------------*/
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 736px;
   }
 
+  /*-----------------h1---------------------*/
+
+  .section-title {
+    padding: 112px 0;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    width: 100%;
+    margin: 0 auto 36px;
+    text-transform: capitalize;
+  }
+
+  /*----------ourbenefits------------*/
   .ourbenefits-list {
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
-    row-gap: 72px;
+    width: 736px;
+    /*     gap: 24px; */
   }
 
   .ourbenefits-item {
-    width: 365px;
+    width: calc((100% - 24px) / 2);
+    width: 356px;
+  }
+
+  /*--------ourportfolio--------*/
+}
+
+/**------------------desctop-------------**/
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1126px;
   }
 }
