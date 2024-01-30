@@ -183,6 +183,13 @@ address {
   height: 100vh;
   padding: 24px 24px 40px 16px;
   z-index: 9999;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .mod-close-btn {
@@ -205,8 +212,6 @@ address {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-}
-.current {
 }
 
 .mod-menu-link:hover,
@@ -274,13 +279,24 @@ address {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-offic.jpg);
+    url(../images/people-mob-1x.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   width: 100%;
   padding: 72px 0;
   margin: 0 auto;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .section-title {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-mob-2x.jpg);
+  }
 }
 
 .hero-container {
@@ -354,7 +370,7 @@ address {
   flex-direction: column;
   /*   justify-content: center; */
   align-items: flex-start;
-  width: 320px;
+  width: 288px;
   gap: 72px;
   padding: 96px 0;
   /*   gap: 24px; */
@@ -412,7 +428,8 @@ address {
 
 .ourteam {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  /*   padding: 120px 0; */
+  padding: 96px 0;
   margin: 0 auto;
 }
 
@@ -435,13 +452,15 @@ address {
 
 .ourteam-list {
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  flex-direction: column;
+  /*   justify-content: center; */
+  gap: 72px;
+  width: 100%;
 }
 
 .ourteam-item {
   background-color: #ffffff;
-  width: calc((100% - 72px) / 4);
+  /*   width: calc((100% - 72px) / 4); */
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -452,6 +471,7 @@ address {
 }
 
 .ourteam-img {
+  width: 100%;
 }
 .ourteam-item-border {
 }
@@ -482,8 +502,8 @@ address {
   text-align: center;
   font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.32px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
 
@@ -604,17 +624,20 @@ address {
 /*-------------footer----------------*/
 
 .footer {
-  padding: 100px 0;
+  /* padding: 100px 0; */
+  padding: 96px 0;
   background: #2e2f42;
-  margin: 0 auto;
+  /*   margin: 0 auto; */
 }
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  /*   align-items: baseline; */
 }
 .footer-container-logo {
-  margin-right: 120px;
+  /*   margin-right: 120px; */
+  width: 100%;
 }
 
 .footer-logo span {
@@ -630,8 +653,12 @@ address {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 16px;
+  /*   display: inline-block; */
+  /*   margin-bottom: 16px; */
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  padding-bottom: 16px;
 }
 
 .footer-text {
@@ -641,7 +668,9 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   width: 100%;
-  max-width: 264px;
+  max-width: 288px;
+  margin-bottom: 72px;
+  /*   max-width: 264px; */
 }
 .footer-social {
 }
@@ -652,13 +681,16 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer-list {
   display: flex;
+  justify-content: center;
   gap: 16px;
   color: #fff;
 }
 .footer-list-item {
+  margin-bottom: 72px;
 }
 
 .footer-soc {
@@ -683,7 +715,7 @@ address {
 }
 
 .subscribe {
-  margin-left: 80px;
+  /*   margin-left: 80px; */
 }
 
 .subscribe-par {
@@ -693,19 +725,24 @@ address {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 .footer-form {
   display: flex;
-  gap: 24px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  /*   gap: 24px; */
 }
 
 .footer-label {
   display: flex;
+  justify-content: center;
 }
 
 .footer-input {
-  width: 264px;
+  width: 288px;
   height: 40px;
   flex-shrink: 0;
   font-size: 12px;
@@ -716,7 +753,7 @@ address {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
   color: #ffffff;
-  padding-left: 16px;
+  /*   padding-left: 16px; */
 }
 
 .input::placeholder {
@@ -728,11 +765,12 @@ address {
 
 .footer-btn-subscribe {
   display: flex;
+  /*   justify-content: center; */
   padding: 8px 24px;
-  justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  min-width: 165px;
+  max-width: 165px;
+  /*   min-width: 165px; */
   height: 40px;
   border-radius: 4px;
   background-color: #4d5ae5;
@@ -744,6 +782,7 @@ address {
   letter-spacing: 0.04em;
   border: none;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 .footer-form-icon {
@@ -1051,8 +1090,30 @@ address {
   /*-----------------h1---------------------*/
 
   .section-title {
+    background-color: #2e2f42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-tab-1x.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
     padding: 112px 0;
     margin: 0 auto;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .section-title {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-tab-2x.jpg);
+    }
   }
 
   .title {
@@ -1129,5 +1190,17 @@ address {
     max-width: 1440px;
     padding: 72px 0;
     padding: 188px 0;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .section-title {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/people-offic-2x.jpg);
+    }
   }
 }
