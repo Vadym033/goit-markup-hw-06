@@ -382,16 +382,6 @@ address {
 }
 
 .ourbenefits-icon-container {
-  width: 264px;
-  height: 112px;
-  flex-shrink: 0;
-  border-radius: 4px;
-  border: 1px solid #8e8f99;
-  background: #f4f4fd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
   display: none;
 }
 
@@ -1173,6 +1163,27 @@ address {
     width: calc((100% - 24px) / 2);
   }
 
+  /*--------------footer---------------*/
+
+  .footer-container {
+    flex-direction: row;
+    margin-left: 108px;
+    width: calc((100% - 24px) / 2);
+  }
+  .footer-container-logo {
+    /*   margin-right: 120px; */
+    /*     width: 100%;
+ */
+  }
+  .footer-logo {
+    margin: 0;
+    /*    display: inline-block; */
+  }
+
+  .subscribe {
+    display: inline;
+  }
+
   /**-----------modal-backdrop--------**/
 
   .modal {
@@ -1236,7 +1247,6 @@ address {
     background-size: cover;
     width: 100%;
     max-width: 1440px;
-    padding: 72px 0;
     padding: 188px 0;
   }
 
@@ -1250,5 +1260,124 @@ address {
         ),
         url(../images/people-offic-2x.jpg);
     }
+  }
+
+  .title {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    width: 100%;
+    max-width: 496px;
+    margin: 0 auto 48px;
+  }
+
+  /*-----------ourbenefits-------------*/
+
+  .section-ourbenefits {
+    padding: 120px 0;
+  }
+
+  .ourbenefits-list {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .ourbenefits-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .ourbenefits-icon-container {
+    width: 264px;
+    height: 112px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    background: #f4f4fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .subtitle-ourbenefits {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+
+  .ourbenefits-text {
+    font-weight: 400;
+  }
+
+  /*-----------ourteam-------------*/
+
+  .ourteam {
+    padding: 120px 0;
+  }
+
+  .ourteam-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .ourteam-item {
+    background-color: #ffffff;
+    width: calc((100% - 72px) / 4);
+  }
+
+  /*--------  --ourportfolio----------*/
+
+  .ourportfolio {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .ourportfolio-list {
+    justify-content: center;
+  }
+  .ourportfolio-item {
+    width: calc((100% - 48px) / 3);
+  }
+  /*--------------footer-----------------*/
+  .footer {
+    padding: 100px 0;
+    margin: 0 auto;
+  }
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-items: baseline;
+  }
+
+  .footer-container-logo {
+    margin-right: 120px;
+  }
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+  .subscribe {
+    margin-left: 80px;
+  }
+
+  .footer-form {
+    gap: 24px;
+  }
+  .footer-label {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-btn-subscribe {
+    justify-content: center;
+    min-width: 165px;
+  }
+
+  .footer-form-icon {
+    margin-left: 16px;
   }
 }
