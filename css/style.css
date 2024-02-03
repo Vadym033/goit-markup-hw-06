@@ -976,6 +976,9 @@ address {
   fill: #f4f4fd;
 }
 
+.icon-click {
+}
+
 .privacy-policy {
   color: #4d5ae5;
   text-decoration: underline;
@@ -1009,7 +1012,7 @@ address {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    min-width: 768px;
     width: 100%;
   }
 
@@ -1139,8 +1142,6 @@ address {
   /*-------------ourteam------------*/
 
   .ourteam {
-    padding: 96px 108px;
-    margin: 0 auto;
   }
   .ourteam-list {
     flex-direction: row;
@@ -1166,22 +1167,35 @@ address {
   /*--------------footer---------------*/
 
   .footer-container {
-    flex-direction: row;
-    margin-left: 108px;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: calc((100% - 24px) / 2);
   }
+
+  .container-logo-soc {
+    display: flex;
+  }
   .footer-container-logo {
-    /*   margin-right: 120px; */
-    /*     width: 100%;
- */
+    width: 264px;
+    margin-right: 24px;
   }
   .footer-logo {
     margin: 0;
-    /*    display: inline-block; */
   }
 
+  .footer-form {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .subscribe-par {
+    text-align: left;
+  }
   .subscribe {
     display: inline;
+  }
+  .footer-btn-subscribe {
+    margin-left: 0;
   }
 
   /**-----------modal-backdrop--------**/
@@ -1340,12 +1354,12 @@ address {
   /*--------------footer-----------------*/
   .footer {
     padding: 100px 0;
-    max-width: 1158px;
   }
   .footer-container {
-    margin: 0 auto;
-    align-items: center;
-    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /*     margin: 0 auto; */
+    /*     align-items: baseline; */
   }
 
   .footer-container-logo {
@@ -1358,6 +1372,7 @@ address {
 
   .footer-text {
     max-width: 264px;
+    margin-bottom: 0;
   }
   .subscribe {
     margin-left: 80px;
