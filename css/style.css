@@ -197,13 +197,13 @@ address {
   justify-content: center;
   align-items: center;
   margin-left: auto;
-  border-radius: 50%;
   margin-bottom: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #e7e9fc;
+  border-radius: 50%;
 }
 
 .mod-close-btn:hover,
@@ -213,7 +213,6 @@ address {
 }
 
 .mod-menu-list {
-  margin-bottom: 168px;
 }
 .mod-menu-item:not(:last-child) {
   margin-bottom: 40px;
@@ -239,10 +238,10 @@ address {
 }
 
 .mod-address {
-  margin-bottom: 48px;
 }
 .mod-address-list {
 }
+
 .mod-address-item:not(:last-child) {
   margin-bottom: 24px;
 }
@@ -260,7 +259,6 @@ address {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 16px;
 }
 
 .social-mob-list {
@@ -360,6 +358,7 @@ address {
 /*---------------------------*/
 
 .section-ourbenefits {
+  padding: 96px 0;
   /*   padding: 120px 0; */
 }
 
@@ -386,7 +385,6 @@ address {
   align-items: flex-start;
   width: 288px;
   gap: 72px;
-  padding: 96px 0;
   /*   gap: 24px; */
 }
 
@@ -411,6 +409,7 @@ address {
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px; */
+  margin-bottom: 8px;
   font-size: 36px;
   font-style: normal;
   font-weight: 700;
@@ -641,6 +640,7 @@ address {
   /*   align-items: baseline; */
 }
 .footer-container-logo {
+  margin-bottom: 72px;
   /*   margin-right: 120px; */
   width: 100%;
 }
@@ -663,7 +663,7 @@ address {
   display: block;
   margin: 0 auto;
   max-width: 50%;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .footer-text {
@@ -674,10 +674,10 @@ address {
   letter-spacing: 0.02em;
   width: 100%;
   max-width: 288px;
-  margin-bottom: 72px;
   /*   max-width: 264px; */
 }
 .footer-social {
+  margin-bottom: 72px;
 }
 .footer-soc-media {
   color: #fff;
@@ -695,7 +695,6 @@ address {
   color: #fff;
 }
 .footer-list-item {
-  margin-bottom: 72px;
 }
 
 .footer-soc {
@@ -737,13 +736,12 @@ address {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-  /*   gap: 24px; */
 }
 
 .footer-label {
   display: flex;
   justify-content: center;
+  margin-bottom: 16px;
 }
 
 .footer-input {
@@ -1172,8 +1170,15 @@ address {
   /*--------------footer---------------*/
 
   .footer-container {
+    min-width: 768px;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: calc((100% - 24px) / 2);
+  }
+
+  .footer-soc-media {
+    text-align: left;
   }
 
   .container-logo-soc {
@@ -1185,6 +1190,10 @@ address {
   }
   .footer-logo {
     margin: 0;
+    margin-bottom: 16px;
+  }
+
+  .footer-social {
   }
 
   .footer-form {
